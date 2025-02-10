@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  runtimeConfig: {
-    myProxyUrl: 'https://jsonplaceholder.typicode.com/'
-  }
+//   runtimeConfig: {
+//     myProxyUrl: 'https://jsonplaceholder.typicode.com/'
+//   }
 
   // If you only have a static proxy URL, use the routeRules feature!
 
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   }*/
 
   // Nitro Dev Server Proxy: Will break during SSR
-  /*
+  
   nitro: {
     devProxy: {
       '/api': {
@@ -43,5 +43,5 @@ export default defineNuxtConfig({
       }
     }
   }
-  */
+  
 })
