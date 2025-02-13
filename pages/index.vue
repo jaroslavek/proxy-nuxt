@@ -16,7 +16,7 @@ const { data, error, status } = await useFetch<Array<any>>("/api/users", {
 });
 
 // Logování výsledků
-console.log(`✅ Data po: ${delayTime.value} ms:`, data.value);
+console.log(`✅ Data po: ${delayTime.value} ms:`, data.value?.length);
 
 if (error.value) {
   console.error("❌ Chyba při načítání:", error.value);
@@ -31,8 +31,8 @@ onMounted(async () => {
 watch(
   data,
   (newValue: any, oldValue: any) => {
-    console.log("watch:data", data);
-    console.log("📊 Změna dat:", { oldValue, newValue });
+    // console.log("watch:data", data);
+    // console.log("📊 Změna dat:", { oldValue, newValue });
   },
   { immediate: true }
 ); // Spustí se i hned při načtení komponenty

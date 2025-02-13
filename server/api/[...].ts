@@ -8,5 +8,6 @@ export default defineEventHandler(async (event) => {
   const target = joinURL(proxyUrl, path)
   
   // proxy it!
+  console.log('proxying to:', target)
   return proxyRequest(event, target)
 })

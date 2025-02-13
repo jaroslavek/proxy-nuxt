@@ -7,11 +7,16 @@ export default defineNuxtConfig({
   },
   // If you only have a static proxy URL, use the routeRules feature!
 
-  routeRules: {
-    "/api/**": {
-      proxy: "https://jsonplaceholder.typicode.com/**",
-    },
-  },
+  /**
+   * Pro SSR proxy.
+   * bud tento zapis routeRules, nebo vytvořit defineEventHandler 
+   * na path server/api/[...].ts
+   */
+  // routeRules: {
+  //   "/api/**": {
+  //     proxy: "https://jsonplaceholder.typicode.com/**",
+  //   },
+  // },
 
   //
   // Other not recommended approaches
